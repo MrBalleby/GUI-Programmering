@@ -1,4 +1,4 @@
-﻿namespace BillingSystem
+﻿namespace Terminal
 {
     partial class Form1
     {

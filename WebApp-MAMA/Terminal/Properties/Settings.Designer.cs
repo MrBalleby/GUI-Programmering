@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BillingSystem.Properties
+namespace Terminal.Properties
 {
 
 

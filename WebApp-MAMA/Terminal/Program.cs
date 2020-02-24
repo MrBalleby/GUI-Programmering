@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BillingSystem
+namespace Terminal
 {
     static class Program
     {

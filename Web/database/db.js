@@ -1,7 +1,6 @@
 const Sequelize = require("sequelize");
-const db = {}
-const sequelize = new Sequelize("restaurant", "db_user", "Password1", {
-  host: "192.168.132.33",
+const sequelize = new Sequelize("restaurant", "root", "", {
+  host: "localhost", // 192.168.132.33
   dialect: "mysql",
   pool: {
     max: 5,
@@ -10,6 +9,8 @@ const sequelize = new Sequelize("restaurant", "db_user", "Password1", {
     idle: 10000
   }
 });
+
+const db = {};
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

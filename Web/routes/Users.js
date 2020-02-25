@@ -32,19 +32,62 @@ users.post('/register', (req, res) => {
         .then(user => {
           let token = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
             expiresIn: 1440
-          })
-          res.json({ token: token })
+          });
+          res.json({ token: token });
         })
         .catch(err => {
-          res.send('error: ' + error)
+          res.send('error: ' + err);
         })
     } else {
-      res.json({ error: 'User already exists' })
+      res.json({ error: 'User already exists' });
     }
   })
   .catch(err => {
-    res.send('error: ' + err)
+    res.send('error: ' + err);
+  });
+});
+
+// Login
+users.post('/login', (req, res) => {
+  User.findOne({
+    where: {
+      email: req.body.email
+    }
   })
+  .then(user => {
+    if (bcrypt.compareSync(req.body.password, user.password)) {
+      let token = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
+        expiresIn: 1440
+      });
+      res.json({ token: token });
+    } else {
+      res.send('User does not exist');
+    }
+  })
+  .catch(err => {
+    res.send('error: ' + err);
+  });
+});
+
+// Profile
+users.get('/profile', (req, res) => {
+  var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY);
+
+  users.findOne({
+    where: {
+      id: decoded.id
+    }
+  })
+  .then(user => {
+    if (user) {
+      res.json(user);
+    } else {
+      res.send('User does not exist');
+    }
+  })
+  .catch(err => {
+    res.send('error: ' + err);
+  });
 });
 
 module.exports = users;

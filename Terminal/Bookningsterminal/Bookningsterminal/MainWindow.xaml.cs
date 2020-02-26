@@ -20,6 +20,7 @@ namespace Bookningsterminal
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int tableNumber { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace Bookningsterminal
             switch (whatBtnClick1)
             {
                 case 1: //code here
-                   
+                    
                     break;
                 case 2: //code here
                 
@@ -68,57 +69,57 @@ namespace Bookningsterminal
         
          public void _1_1_Click(object sender, RoutedEventArgs e)
          {
-             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-             button_Click(1, e);
+            this.Tablebooking_Canvas.Visibility = Visibility.Visible;
+            tableNumber = 1;
          }
          
          private void _1_2_Click(object sender, RoutedEventArgs e)
          {
             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-            button_Click(2, e);
+            tableNumber = 2;
 
         }
          
          private void _1_3_Click(object sender, RoutedEventArgs e)
          {
             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-            button_Click(3, e);
+            tableNumber = 3;
         }
          
          private void _1_4_Click(object sender, RoutedEventArgs e)
          {
             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-            button_Click(4, e);
+            tableNumber = 4;
         }
          
          private void _1_5_Click(object sender, RoutedEventArgs e)
          {
             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-            button_Click(5, e);
+            tableNumber = 5;
         }
          
          private void _1_6_Click(object sender, RoutedEventArgs e)
          {
             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-            button_Click(6, e);
+            tableNumber = 6;
         }
          
          private void _1_7_Click(object sender, RoutedEventArgs e)
          {
             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-            button_Click(7, e);
+            tableNumber = 7;
         }
          
          private void _1_8_Click(object sender, RoutedEventArgs e)
          {
             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-            button_Click(8, e);
+            tableNumber = 8;
         }
          
          private void _1_9_Click(object sender, RoutedEventArgs e)
          {
             this.Tablebooking_Canvas.Visibility = Visibility.Visible;
-            button_Click(9, e);
+            tableNumber = 9;
         }
          //------------------------------------------Knapper i canvas------------------------------------------------------
          
@@ -127,9 +128,9 @@ namespace Bookningsterminal
              this.Tablebooking_Canvas.Visibility = Visibility.Hidden;
          }
 
-        private void Reserve_BTN_Click(object sender, RoutedEventArgs e, int whatBtnClick)
+        private void Reserve_BTN_Click(object sender, RoutedEventArgs e)
         {
-            
+            button_Click(tableNumber, e);
         }
     }
 }

@@ -6,10 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
+import { ReservationsComponent } from './reservations/reservations.component';
+import { ProfileComponent } from './profile/profile.component';
 import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
 
@@ -17,6 +18,7 @@ const routes: Routes = [
    { path: '', component: HomeComponent },
    { path: 'login', component: LoginComponent },
    { path: 'register', component: RegisterComponent },
+   { path: 'reservations', component: ReservationsComponent, canActivate: [AuthGuardService] },
    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] }
 ]
 
@@ -26,6 +28,7 @@ const routes: Routes = [
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    ReservationsComponent,
     ProfileComponent
   ],
   imports: [

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarexample" aria-controls="navbarexample">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -14,7 +14,10 @@
         <a class="nav-link" routerLink="/register">Register</a>
       </li>
       <li class="nav-item" *ngIf="auth.isLoggedIn()">
-        <a class="nav-link" routerLink="/profile">{{ auth.getUserDetails()?.first_name }}</a>
+        <a class="nav-link" routerLink="/reservations">Reservations</a>
+      </li>
+      <li class="nav-item" *ngIf="auth.isLoggedIn()">
+        <a class="nav-link" routerLink="/profile">Profile<!--{{ auth.getUserDetails()?.first_name }}--></a>
       </li>
       <li class="nav-item" *ngIf="auth.isLoggedIn()">
         <a class="nav-link" (click)="auth.logout()" routerLink="">Logout</a>

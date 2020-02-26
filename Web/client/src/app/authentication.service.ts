@@ -42,6 +42,8 @@ export class AuthenticationService {
       this.token = localStorage.getItem('userToken');
       return this.token;
     }
+
+    return this.token;
   }
 
   public getUserDetails(): UserDetails {

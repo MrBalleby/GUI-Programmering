@@ -9,8 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 var Users = require("./routes/Users");
+var Reservations = require("./routes/Reservations");
 
 app.use("/api/users", Users);
+app.use("/api/reservations", Reservations);
 
 app.listen(port, function () {
   console.log("Server is running on port " + port);

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="jumbotron mt-5">
+    <div class="col-sm-8 mx-auto">
+      <h1 class="text-center">Reservation Info</h1>
+      <table class="col-md-6 mx-auto">
+        <tr>
+          <td>Table ID</td>
+          <td>{{ info?.id }}</td>
+        </tr>
+        <tr>
+          <td>Employee</td>
+          <td>{{ info?.employee }}</td>
+        </tr>
+        <tr>
+          <td>Table</td>
+          <td>{{ info?.table }}</td>
+        </tr>
+        <tr>
+          <td>Start</td>
+          <td>{{ info?.start_date | date:'yyyy-MM-dd HH:mm' }}</td>
+        </tr>
+        <tr>
+          <td>End</td>
+          <td>{{ info?.end_date | date:'yyyy-MM-dd HH:mm' }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -36,7 +36,8 @@ namespace DAL
         int id { get; set; }
         int employee_id { get; set; }
         int table_id { get; set; }
-        DateTime date { get; set; }
+        DateTime start_date { get; set; }
+        DateTime end_date { get; set; }
     }
 
     interface Itables

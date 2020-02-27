@@ -1,0 +1,157 @@
+﻿<Window x:Class="Secondterminal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Secondterminal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1450">
+    <Grid Margin="-20,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="293*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="388*"/>
+        </Grid.RowDefinitions>
+        <Frame HorizontalAlignment="Left" Height="689" Margin="20,0,0,0" VerticalAlignment="Top" Width="1024" Grid.RowSpan="3">
+            <Frame.Background>
+                <ImageBrush ImageSource="pics/plantegningprjekt.jpg" Stretch="Uniform"/>
+            </Frame.Background>
+        </Frame>
+        <Button x:Name="id_1" Content="" HorizontalAlignment="Left" Height="125" Margin="73,10,0,0" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="20" Click="_1_1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="id_2" Content="" HorizontalAlignment="Left"  Height="125" Margin="223,10,0,0" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="20" Click="_1_2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="id_3" Content="" HorizontalAlignment="Left" Height="125" Margin="363,10,0,0" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="20" Click="_1_3_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="id_4" Content="" HorizontalAlignment="Left" Height="125" Margin="500,10,0,0" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="20" Click="_1_4_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="id_5" Content="" HorizontalAlignment="Left" Height="125" Margin="667,10,0,0" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="20" Click="_1_5_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="id_6" Content="" HorizontalAlignment="Left" Height="125" Margin="835,7,0,0" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="20" Click="_1_6_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.062"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="id_9" Content="" HorizontalAlignment="Left" Height="125" Margin="835,210,0,0" VerticalAlignment="Top" Width="65" Grid.Row="2" FontWeight="Bold" FontSize="20" Click="_1_9_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="id_8" Content="" HorizontalAlignment="Left" Height="125" Margin="667,210,0,0" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="20" Click="_1_8_Click" Grid.Row="2">
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="id_7" Content="" HorizontalAlignment="Left" Height="125" Margin="500,210,0,0" VerticalAlignment="Top" Width="65" Grid.Row="2" FontWeight="Bold" FontSize="20" Click="_1_7_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pics/bordledigtknap.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="bord1" Content="1.1" HorizontalAlignment="Left" Margin="73,141,0,0" VerticalAlignment="Top" Height="32" Width="65" FontWeight="Bold" FontSize="20"/>
+        <Label Content="1.2" HorizontalAlignment="Left" Margin="233,141,0,0" VerticalAlignment="Top" Height="39" Width="37" FontWeight="Bold" FontSize="20"/>
+        <Label Content="1.3" HorizontalAlignment="Left" Margin="372,141,0,0" VerticalAlignment="Top" Height="39" Width="37" FontWeight="Bold" FontSize="20"/>
+        <Label Content="1.4" HorizontalAlignment="Left" Margin="509,141,0,0" VerticalAlignment="Top" Height="39" Width="37" FontWeight="Bold" FontSize="20"/>
+        <Label Content="1.5" HorizontalAlignment="Left" Margin="667,141,0,0" VerticalAlignment="Top" Height="39" Width="37" FontWeight="Bold" FontSize="20"/>
+        <Label Content="1.6" HorizontalAlignment="Left" Margin="835,141,0,0" VerticalAlignment="Top" Height="39" Width="37" FontWeight="Bold" FontSize="20"/>
+        <Label Content="1.7" HorizontalAlignment="Left" Margin="509,166,0,0" VerticalAlignment="Top" Height="39" Width="37" FontWeight="Bold" FontSize="20" Grid.Row="2"/>
+        <Label Content="1.8" HorizontalAlignment="Left" Margin="667,166,0,0" VerticalAlignment="Top" Height="39" Width="37" FontWeight="Bold" FontSize="20" Grid.Row="2"/>
+        <Label Content="1.9" HorizontalAlignment="Left" Margin="835,166,0,0" VerticalAlignment="Top" Height="39" Width="37" FontWeight="Bold" FontSize="20" Grid.Row="2"/>
+        <Label Content="1.Sal" HorizontalAlignment="Left" Height="35" Margin="724,84,0,0" Grid.Row="2" VerticalAlignment="Top" Width="62" FontWeight="Bold" FontSize="20"/>
+        <Button Content="" HorizontalAlignment="Left" Height="108" Margin="676,272,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="160" Background="{x:Null}" FontWeight="Bold" Click="Button_Click"/>
+
+
+
+
+
+        <Canvas x:Name="Tablebooking_Canvas" HorizontalAlignment="Left" Height="636" Margin="1044,0,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="408" Visibility="Visible">
+            <Button x:Name="Free_BTN" Content="Free" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="88" FontWeight="Bold" FontSize="20" Canvas.Left="106" Canvas.Top="59" Click="Free_BTN_Click"/>
+            <Button x:Name="Back_BTN" Content="Back" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="204" FontWeight="Bold" FontSize="20" Click="Back_BTN_Click" Canvas.Left="106" Canvas.Top="568"/>
+            <Button x:Name="Reserve_BTN" Content="Reserve" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="88" FontWeight="Bold" FontSize="20" Canvas.Left="222" Canvas.Top="59" Click="Reserve_BTN_Click"/>
+            <Image Height="274" Canvas.Left="121" Canvas.Top="292" Width="169" Source="pics\bord.jpg"/>
+            <Button x:Name="stol1"  Canvas.Left="28" Canvas.Top="292" Width="88" Height="88">
+                <Button.Background>
+                    <ImageBrush ImageSource="pics/stolgrøn.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="stol2" Canvas.Left="295" Canvas.Top="292" Width="88" Height="88" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="pics/stolgrøn.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="stol5"  Canvas.Left="28" Canvas.Top="473" Width="88" Height="88">
+                <Button.Background>
+                    <ImageBrush ImageSource="pics/stolgrøn.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="stol3"  Canvas.Left="28" Canvas.Top="385" Width="88" Height="88">
+                <Button.Background>
+                    <ImageBrush ImageSource="pics/stolgrøn.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="stol6" Canvas.Left="295" Canvas.Top="468" Width="88" Height="88" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="pics/stolgrøn.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="stol4"  Canvas.Left="295" Canvas.Top="380" Width="88" Height="88" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="pics/stolgrøn.jpg"/>
+                </Button.Background>
+            </Button>
+
+            <Label Name="LiveTimeLabel" Content="%TIME%" Canvas.Left="222" Canvas.Top="10" Height="36" Width="120" FontWeight="Bold" FontSize="20"/>
+            <Label Name="Reservetime" Content="Label" Height="38" Canvas.Left="222" Canvas.Top="127" Width="88" FontWeight="Bold" FontSize="20"/>
+
+
+
+        </Canvas>
+
+    </Grid>
+</Window>

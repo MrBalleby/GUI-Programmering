@@ -105,9 +105,9 @@ namespace BLL
             dal.D_Permissions(id, a);
         }
 
-        public void C_Reservations(int a, int b, DateTime c, DateTime d, string e)
+        public void C_Reservations(int a, int b, DateTime c, string d)
         {
-            dal.C_Reservations(a, b, c, d, e);
+            dal.C_Reservations(a, b, c, d);
         }
 
         public DataTable R_Reservations(int a, string b)

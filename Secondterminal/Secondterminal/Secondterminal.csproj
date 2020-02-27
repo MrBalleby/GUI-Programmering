@@ -108,5 +108,11 @@
   <ItemGroup>
     <Resource Include="pics\bord.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Terminal\BLL\BLL.csproj">
+      <Project>{98DE663A-8982-4AB6-9A37-8E17192E9C42}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

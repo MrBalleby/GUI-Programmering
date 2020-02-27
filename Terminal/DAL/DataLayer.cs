@@ -27,6 +27,12 @@ namespace DAL
         public DateTime start_date { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DateTime end_date { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+
+
+
+        
+
+
         //C
         public void C_Employee(string a, string b, string c, string d, string e, int f, DateTime g, string h)
         {
@@ -134,33 +140,30 @@ namespace DAL
             }
         }
 
-        public void C_Reservations(int a, int b, DateTime c, DateTime d, string e)
+        public void C_Reservations(int a, int b, DateTime c, string d)
         {
-            string commandText = "insert into reservations(employee_id, table_id, start_date, end_date) VALUES(@a, @b, @c)";
+            MySql.Data.MySqlClient.MySqlConnection con;
+            
+            string commandText = "insert into reservations(employee_id, table_id, start_date) VALUES(@a, @b, @c)";
 
-            using (SqlConnection connection = new SqlConnection(e))
-            {
-                SqlCommand command = new SqlCommand(commandText, connection);
-                command.Parameters.Add("@a", SqlDbType.Int);
-                command.Parameters.Add("@b", SqlDbType.Int);
-                command.Parameters.Add("@c", SqlDbType.DateTime);
-                command.Parameters.Add("@d", SqlDbType.DateTime);
+            
+                MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand(commandText);
                 command.Parameters.AddWithValue("@a", a);
                 command.Parameters.AddWithValue("@b", b);
                 command.Parameters.AddWithValue("@c", c);
-                command.Parameters.AddWithValue("@c", d);
-
-                try
-                {
-                    connection.Open();
-                    Int32 rowsAffected = command.ExecuteNonQuery();
-                    Console.WriteLine("RowsAffected: {0}", rowsAffected);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+            try
+            {
+                con = new MySql.Data.MySqlClient.MySqlConnection();
+                con.ConnectionString = d;
+                con.Open();
+                command.Connection = con;
+                command.ExecuteNonQuery();
             }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        
         }
 
         public void C_Tables(string a, int b, string c)
